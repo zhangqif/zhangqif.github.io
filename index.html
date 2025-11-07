@@ -189,11 +189,45 @@
                 font-size: 2rem;
             }
         }
+     /* 新增图片样式 */
+     .company-logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        
+        .service-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .team-photo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            margin: 1rem auto;
+            display: block;
+        }
+
+
+
     </style>
 </head>
 <body>
     <header>
         <div class="container">
+            <!-- 添加公司Logo -->
+            <img src="images/logo.png" alt="武汉吉橙生物科技有限公司" class="company-logo">
             <div class="logo">武汉吉橙生物科技有限公司</div>
             <div class="tagline">专业生物技术服务提供商</div>
         </div>
@@ -213,7 +247,9 @@
     <main class="container">
         <section id="home" class="section">
             <h2>欢迎访问</h2>
-            <p>武汉吉橙生物科技有限公司致力于为客户提供专业的生物技术服务和解决方案。我们拥有丰富的经验和专业的技术团队，能够满足您在生物信息学分析、单细胞测序等方面的各种需求。</p>
+            <p>武汉吉橙生物科技有限公司致力于为客户提供专业的生物技术服务和解决方案。</p>
+            <!-- 添加首页展示图片 -->
+            <img src="images/services.jpg" alt="我们的服务" class="service-image">
         </section>
         
         <section id="services" class="section">
@@ -224,12 +260,14 @@
                 <li><strong>定制化数据分析服务</strong> - 根据您的特定需求定制数据分析方案</li>
                 <li><strong>科研合作与技术支持</strong> - 提供科研项目合作和技术咨询服务</li>
             </ul>
+            <img src="images/technology.jpg" alt="技术服务" class="service-image">
         </section>
         
         <section id="about" class="section">
             <h2>关于我们</h2>
-            <p>我们拥有一支经验丰富的生物信息学团队，专注于为科研机构和企业提供高质量的数据分析服务。我们的团队成员具有深厚的生物信息学背景和丰富的项目经验，能够为您的研究提供强有力的技术支持。</p>
-            <p>我们始终坚持以客户需求为导向，以专业的技术和优质的服务赢得了广大客户的信任和支持。</p>
+            <p>我们拥有一支经验丰富的生物信息学团队，专注于为科研机构和企业提供高质量的数据分析服务。</p>
+            <!-- 添加团队照片 -->
+            <img src="images/team.jpg" alt="我们的团队" class="team-photo">
         </section>
         
         <section id="contact" class="section">
@@ -240,9 +278,16 @@
                     <i>📞</i> <a href="tel:18371331113" class="phone-link">田经理 18371331113</a>
                 </div>
                 <div class="contact-item">
-                    <i>✉️</i> <span>邮箱: contact@example.com</span>
+                    <i>✉️</i> <span>邮箱: 18371331113@163.com</span>
                 </div>
             </div>
+            
+            <!-- 添加微信二维码 -->
+            <div class="contact-item">
+                <i>💬</i> <span>微信联系:</span>
+                <img src="images/wechat-qr.jpg" alt="微信二维码" class="qr-code">
+            </div>
+            
             <div class="social-links">
                 <a href="http://hejie.nigeerhuo.com" target="_blank">技术博客</a>
             </div>
@@ -258,7 +303,7 @@
     <a href="#" class="back-to-top" id="backToTop">↑</a>
 
     <script>
-        // 返回顶部按钮功能
+        // 您的现有JavaScript代码
         const backToTopButton = document.getElementById('backToTop');
         
         window.addEventListener('scroll', () => {
@@ -277,7 +322,6 @@
             });
         });
         
-        // 平滑滚动到锚点
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -297,3 +341,5 @@
     </script>
 </body>
 </html>
+
+
