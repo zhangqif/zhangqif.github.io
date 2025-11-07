@@ -175,22 +175,8 @@
             opacity: 1;
         }
         
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .nav-links li {
-                margin: 0.5rem 0;
-            }
-            
-            .logo {
-                font-size: 2rem;
-            }
-        }
-     /* 新增图片样式 */
-     .company-logo {
+        /* 图片样式 */
+        .company-logo {
             max-width: 200px;
             height: auto;
             margin-bottom: 1rem;
@@ -212,15 +198,20 @@
             margin: 1rem 0;
         }
         
-        .qr-code {
-            width: 150px;
-            height: 150px;
-            margin: 1rem auto;
-            display: block;
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
         }
-
-
-
     </style>
 </head>
 <body>
@@ -260,7 +251,7 @@
                 <li><strong>定制化数据分析服务</strong> - 根据您的特定需求定制数据分析方案</li>
                 <li><strong>科研合作与技术支持</strong> - 提供科研项目合作和技术咨询服务</li>
             </ul>
-            <img src="images/technology.jpg" alt="技术服务" class="service-image">
+            <img src="images/team.jpg" alt="技术服务" class="service-image">
         </section>
         
         <section id="about" class="section">
@@ -282,12 +273,6 @@
                 </div>
             </div>
             
-            <!-- 添加微信二维码 -->
-            <div class="contact-item">
-                <i>💬</i> <span>微信联系:</span>
-                <img src="images/wechat-qr.jpg" alt="微信二维码" class="qr-code">
-            </div>
-            
             <div class="social-links">
                 <a href="http://hejie.nigeerhuo.com" target="_blank">技术博客</a>
             </div>
@@ -303,7 +288,7 @@
     <a href="#" class="back-to-top" id="backToTop">↑</a>
 
     <script>
-        // 您的现有JavaScript代码
+        // 返回顶部按钮功能
         const backToTopButton = document.getElementById('backToTop');
         
         window.addEventListener('scroll', () => {
@@ -322,6 +307,7 @@
             });
         });
         
+        // 平滑滚动到锚点
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
